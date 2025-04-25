@@ -19,6 +19,15 @@ export default defineConfig([
         ...globals.browser,
       },
     },
+    extends: [
+      'plugin:vue/vue3-recommended',
+      'eslint:recommended',
+      '@vue/eslint-config-prettier',
+      'plugin:vitest-globals/recommended',
+    ],
+    environment: {
+      'vitest-globals/env': true,
+    },
   },
 
   js.configs.recommended,
